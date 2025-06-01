@@ -4,7 +4,7 @@ import { Clock, DollarSign, Heart, Share2, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { campaigns } from '../data/campaigns.js';
 import AnimatedWrapper from '../components/AnimatedWrapper.jsx';
-import FounderImage from './Images/founder.jpg'; // Adjust the path as necessary
+import FounderImage from './Images/Founder.jpg'; // Adjust the path as necessary
 
 const CURRENCIES = [
   { code: 'USD', name: 'US Dollar', symbol: '$', rateToNGN: 1500 },
