@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ridan Express - Debug Mode</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #FF6B35;
+      }
+      .card {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      pre {
+        background: #eee;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+      .success {
+        color: green;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ridan Express - Debug Helper</h1>
+    
+    <div class="card">
+      <h2>Quick Troubleshooting</h2>
+      <p>If you're seeing a blank screen in your app, try these steps:</p>
+      <ol>
+        <li>Open browser developer tools (F12 or Right-click > Inspect)</li>
+        <li>Check for errors in the Console tab</li>
+        <li>Verify your React root element exists in the Elements tab</li>
+        <li>Try adding <code>?debug=true</code> to your URL</li>
+      </ol>
+    </div>
+    
+    <div class="card">
+      <h2>Common Issues</h2>
+      <ul>
+        <li>
+          <strong>Import errors:</strong> Make sure all imports use .jsx extension (not .tsx)
+          <pre>import Component from './Component.jsx';</pre>
+        </li>
+        <li>
+          <strong>Missing root element:</strong> Ensure index.html has <code>&lt;div id="root"&gt;&lt;/div&gt;</code>
+        </li>
+        <li><strong>CSS conflicts:</strong> Check if any CSS is hiding your content (z-index, display: none, etc.)</li>
+        <li><strong>Routing issues:</strong> Ensure React Router is properly configured</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2>Browser Compatibility Test</h2>
+      <div id="compatibility-results">Testing your browser...</div>
+    </div>
+    
+    <script>
+      // Simple browser compatibility test
+      const results = document.getElementById('compatibility-results');
+      const tests = {
+        'ES6 Support': () => {
+          try {
+            eval('const test = () => {}; class Test {}; new Promise(() => {});');
+            return true;
+          } catch (e) {
+            return false;
+          }
+        },
+        'Fetch API': () => typeof fetch === 'function',
+        'LocalStorage': () => typeof localStorage === 'object',
+        'CSS Grid': () => CSS.supports('display', 'grid'),
+        'CSS Flexbox': () => CSS.supports('display', 'flex')
+      };
+      
+      let html = '<ul>';
+      for (const [feature, test] of Object.entries(tests)) {
+        const supported = test();
+        html += `<li class="${supported ? 'success' : 'error'}">
+          ${feature}: ${supported ? '✓ Supported' : '✗ Not supported'}
+        </li>`;
+      }
+      html += '</ul>';
+      results.innerHTML = html;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Basic styling to ensure content is visible */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Make sure images and other elements don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive image handling for the app showcase */
+@media (max-width: 640px) {
+  .app-showcase-image {
+    object-position: left;
+    width: 200%;
+    max-width: unset;
+  }
+}
+
+/* Add a debug outline to help identify element boundaries during development */
+.debug * {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
