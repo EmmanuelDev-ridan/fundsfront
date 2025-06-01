@@ -3,14 +3,19 @@
   "name": "Ridan Express - E-commerce Fundraising",
   "icons": [
     {
-      "src": "https://mocha-cdn.com/favicon.ico",
+      "src": "/icons/express(3).png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://mocha-cdn.com/apple-touch-icon.png",
+      "src": "/icons/express(3).png",
       "type": "image/png",
-      "sizes": "180x180"
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/express(3).png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
