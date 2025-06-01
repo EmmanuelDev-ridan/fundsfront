@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const corsOptions = {
-    origin: process.env.VITE_FRONTEND_URL || 'https://ridanexpress.vercel.app',
+    origin: process.env.VITE_FRONTEND_URL || 'https://ridan-expressfunding.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Add this line

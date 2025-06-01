@@ -28,8 +28,8 @@ export default function Header() {
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="ml-3 relative">
-              <Link to="/become-investor" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700">
-                Become an Investor
+              <Link to="#" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700">
+                Thanks.
               </Link>
             </div>
           </div>

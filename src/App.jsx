@@ -7,7 +7,7 @@ import Footer from './components/Footer.jsx';
 import HomePage from './pages/HomePage.jsx';
 import CampaignDetailPage from './pages/CampaignDetailPage.jsx';
 import AboutFounderPage from './pages/AboutFounderPage.jsx';
-import InvestorPage from './pages/InvestorPage.jsx';
+// import InvestorPage from './pages/InvestorPage.jsx';
 import ProblemsPage from './pages/ProblemsPage.jsx';
 
 // AnimatePresence wrapper component with scroll to top functionality
@@ -25,7 +25,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/campaign/:id" element={<CampaignDetailPage />} />
         <Route path="/about-founder" element={<AboutFounderPage />} />
-        <Route path="/become-investor" element={<InvestorPage />} />
+        {/* <Route path="/become-investor" element={<InvestorPage />} /> */}
         <Route path="/problems-we-solve" element={<ProblemsPage />} />
         <Route path="*" element={
           <div className="max-w-7xl mx-auto py-16 px-4 text-center">
