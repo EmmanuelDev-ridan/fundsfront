@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const corsOptions = {
-    origin: process.env.VITE_FRONTEND_URL || 'http://localhost:5173',
+    origin: process.env.VITE_FRONTEND_URL || 'https://ridanexpress.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Add this line
