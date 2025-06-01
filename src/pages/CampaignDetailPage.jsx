@@ -7,13 +7,32 @@ import AnimatedWrapper from '../components/AnimatedWrapper.jsx';
 import FounderImage from './Images/Founder.jpg'; // Adjust the path as necessary
 
 const CURRENCIES = [
-  { code: 'USD', name: 'US Dollar', symbol: '$', rateToNGN: 1500 },
-  { code: 'EUR', name: 'Euro', symbol: '€', rateToNGN: 1600 },
-  { code: 'GBP', name: 'British Pound', symbol: '£', rateToNGN: 1900 },
+  { code: 'AED', name: 'UAE Dirham', symbol: 'د.إ', rateToNGN: 437 },
+  { code: 'AUD', name: 'Australian Dollar', symbol: 'A$', rateToNGN: 1100 },
+  { code: 'BDT', name: 'Bangladeshi Taka', symbol: '৳', rateToNGN: 13.16 },
+  { code: 'CAD', name: 'Canadian Dollar', symbol: 'C$', rateToNGN: 1200 },
+  { code: 'CNY', name: 'Chinese Yuan', symbol: '¥', rateToNGN: 220 },
+  { code: 'EGP', name: 'Egyptian Pound', symbol: 'E£', rateToNGN: 100 },
+  { code: 'EUR', name: 'Euro', symbol: '€', rateToNGN: 1806.49 },
+  { code: 'GBP', name: 'British Pound', symbol: '£', rateToNGN: 2139.45 },
+  { code: 'GHS', name: 'Ghanaian Cedi', symbol: 'GH₵', rateToNGN: 150.84 },
+  { code: 'GMD', name: 'Gambian Dalasi', symbol: 'D', rateToNGN: 30 },
+  { code: 'ILS', name: 'Israeli New Shekel', symbol: '₪', rateToNGN: 448.11 },
+  { code: 'INR', name: 'Indian Rupee', symbol: '₹', rateToNGN: 18.62 },
+  { code: 'JPY', name: 'Japanese Yen', symbol: '¥', rateToNGN: 11 },
+  { code: 'KES', name: 'Kenyan Shilling', symbol: 'KSh', rateToNGN: 12.32 },
+  { code: 'LKR', name: 'Sri Lankan Rupee', symbol: 'Rs', rateToNGN: 8 },
+  { code: 'MWK', name: 'Malawian Kwacha', symbol: 'MK', rateToNGN: 1.2 },
+  { code: 'MZN', name: 'Mozambican Metical', symbol: 'MT', rateToNGN: 25 },
   { code: 'NGN', name: 'Nigerian Naira', symbol: '₦', rateToNGN: 1 },
-  { code: 'KES', name: 'Kenyan Shilling', symbol: 'KSh', rateToNGN: 12 },
-  { code: 'GHS', name: 'Ghanaian Cedi', symbol: 'GH₵', rateToNGN: 120 },
-  { code: 'ZAR', name: 'South African Rand', symbol: 'R', rateToNGN: 80 }
+  { code: 'PKR', name: 'Pakistani Rupee', symbol: '₨', rateToNGN: 10 },
+  { code: 'SAR', name: 'Saudi Riyal', symbol: '﷼', rateToNGN: 428 },
+  { code: 'TZS', name: 'Tanzanian Shilling', symbol: 'TSh', rateToNGN: 0.40 },
+  { code: 'UGX', name: 'Ugandan Shilling', symbol: 'USh', rateToNGN: 0.42 },
+  { code: 'USD', name: 'US Dollar', symbol: '$', rateToNGN: 1606.33 },
+  { code: 'XAF', name: 'Central African CFA Franc', symbol: 'FCFA', rateToNGN: 2.5 },
+  { code: 'XOF', name: 'West African CFA Franc', symbol: 'CFA', rateToNGN: 2.5 },
+  { code: 'ZAR', name: 'South African Rand', symbol: 'R', rateToNGN: 88.26 }
 ];
 
 export default function CampaignDetailPage() {
@@ -217,7 +236,7 @@ export default function CampaignDetailPage() {
                   transition={{ duration: 0.5 }}
                   src={campaign.image}
                   alt={campaign.title}
-                  className="w-full h-96 object-center object-cover"
+                  className="w-full h-[100%] object-center object-conatin"
                 />
               </div>
 
@@ -423,7 +442,7 @@ export default function CampaignDetailPage() {
 
                   {emailSent ? (
                     <p className="text-green-600 mt-2 text-center">
-                     Thank you for yout contribution😁
+                      Thank you for yout contribution😁
                     </p>
                   ) : paymentError ? (
                     <p className="text-red-500 mt-2 text-center">{paymentError}</p>

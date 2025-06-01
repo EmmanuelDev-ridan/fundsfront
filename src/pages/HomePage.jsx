@@ -56,7 +56,7 @@ export default function HomePage() {
             animate="visible"
           >
             <motion.h1 variants={itemVariant} className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Ridan Express
+              Ridan Funding 
             </motion.h1>
             <motion.p variants={itemVariant} className="mt-6 max-w-2xl text-xl text-orange-100">
               Help us revolutionize e-commerce with a platform that connects both buyers and sellers like never before. Invest in the future of online shopping.
@@ -68,12 +68,6 @@ export default function HomePage() {
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-orange-700 bg-white hover:bg-orange-50 sm:px-8"
               >
                 Donate Now
-              </Link>
-              <Link
-                to="/become-investor"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
-              >
-                Become an Investor
               </Link>
             </div>
           </motion.div>
